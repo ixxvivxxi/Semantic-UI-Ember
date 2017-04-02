@@ -5,4 +5,4 @@ import {
 
 setResolver(resolver);
 
-$.fn.modal.settings.context = "#ember-testing";
+window.$.fn.modal.settings.context = "#ember-testing";

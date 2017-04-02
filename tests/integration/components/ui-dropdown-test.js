@@ -199,7 +199,7 @@ test('it updates the value if updated from the binding', function(assert) {
   this.set('people_id', 1);
   assert.equal(this.$('.item.selected').data('value'), 1);
 
-  $(this.$('.item')[0]).click();
+  window.$(this.$('.item')[0]).click();
   assert.equal(this.get('people_id'), 1);
   assert.equal(count, 1, 'onChange should have been called only once');
 });
@@ -235,7 +235,7 @@ test('it can set the selected value without binding for full DDAU', function(ass
   assert.equal(this.$('.item').length, 2);
   assert.equal(this.$('.item.selected').length, 0);
 
-  $(this.$('.item')[0]).click();
+  window.$(this.$('.item')[0]).click();
   assert.equal(this.$('.item.selected').data('value'), 1);
   assert.equal(this.get('people_id'), 1);
   assert.equal(count, 1, 'onChange should have been called only once');
